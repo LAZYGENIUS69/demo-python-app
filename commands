@@ -1,0 +1,33 @@
+# to build an image. Be on the directory where dockerfile exists. 
+docker build -t <image/repo-name/yourchoice>:tag . 
+
+# to retag it to your dockerhib repo 
+docker tag <image/repo-name/yourchoice>:tag username/your-repo-name:tag 
+
+# to push 
+docker push username/your-repo-name:tag 
+
+# to pull 
+docker pull username/your-repo-name:tag 
+
+#to run 
+docker run -it -p 9001:8080 username/your-repo-name:tag  
+
+#to run in background 
+
+docker run -d -p 9001:8080 username/your-repo-name:tag
+
+#to get inside the container
+docker exec -it <container-id> bash 
+ 
+# to delete images 
+docker rmi <image-id>
+#to delete container ( should be in stop state) 
+docker stop <container-di>
+docker rm <container id>
+
+
+#to check logs 
+
+docker logs container id 
+  
